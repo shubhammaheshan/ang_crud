@@ -1,0 +1,31 @@
+<h1 class="display-4">Emp Register</h1>
+<form #form='ngForm' autocomplete="off" (ngSubmit)="Submitdata(form)">
+    <input type="hidden" name="id" [(ngModel)]="emp.formData.id">
+    <div class="form-group">
+        <input name="fullname"  [(ngModel)]="emp.formData.fullname" class="form-control" placeholder="FullName"
+            required>
+    </div>
+    <div class="form-group">
+        <input name="position"  [(ngModel)]="emp.formData.position" class="form-control"
+            placeholder="Position">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <input name="empcode"  [(ngModel)]="emp.formData.empcode" class="form-control"
+                placeholder="EmpCode">
+        </div>
+        <div class="form-group col-md-6">
+            <input name="mobile"  [(ngModel)]="emp.formData.mobile" class="form-control"
+                placeholder="Mobile Number">
+        </div>
+    </div>
+    <div class="form-group">
+
+        <button type="submit" class="btn btn-lg btn-block btn-info" [disabled]="form.invalid">submit</button>
+    </div>
+
+    <!-- {{emp.formData | json}}
+    <input  [(ngModel)]="emp.formData.id" name="id"> -->
+
+
+</form>

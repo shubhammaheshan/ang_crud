@@ -1,0 +1,6 @@
+<input type="text" class="form-control" placeholder="enter the name" #input (keyup.enter)="postData(input)">
+
+<h3>{{errmsg}}</h3>
+<ul>
+    <li *ngFor="let data of arraydata">{{data | json}} <input type="submit" class="btn btn-danger" value="Update" (click)="UpdateData(data)"> <input type="submit" class="btn btn-primary" value="Delete" (click)="DeleteData(data)"></li>
+</ul>
